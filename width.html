@@ -4,12 +4,16 @@
 	
 	<meta charset="UTF-8">
 	<script>
-		window.onresize = doALoadOfStuff;
-
-		function doALoadOfStuff() {
+		window.onresize = showNewWindowWidth;
+		window.onload = showNewWindowWidth;
+		
+		function showNewWindowWidth() {
 			document.getElementById('width-show').innerHTML = 'Width = ' +  getWidth();	
 		}
 		
+		// This code to get the width comes from a stackoverflow question
+		// See the answer by sidonaldson 
+		// http://stackoverflow.com/questions/3437786/how-to-get-web-page-size-browser-window-size-screen-size-in-a-cross-browser-wa
 		function getWidth() {
 			var w = window,
 			d = document,
