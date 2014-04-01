@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	
+	<meta charset="UTF-8">
+	<script>
+		window.onresize = doALoadOfStuff;
+
+		function doALoadOfStuff() {
+			document.getElementById('width-show').innerHTML = 'Width = ' +  getWidth();	
+		}
+		
+		function getWidth() {
+			var w = window,
+			d = document,
+			e = d.documentElement,
+			g = d.getElementsByTagName('body')[0],
+			x = w.innerWidth || e.clientWidth || g.clientWidth;	
+			return x;
+		}
+	</script>
+	<title>	</title>
+</head>
+<body>
+	<div id="width-show"> 
+	</div>
+	
+</body>
+</html>
